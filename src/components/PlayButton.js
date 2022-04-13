@@ -8,7 +8,7 @@ export default function PlayButton({currentStatus, setCurrentStatus}) {
     const displayIcon = () => currentStatus ? <FaPause/> : <FaPlay />
   
   return (
-    <Button onClick={() => setCurrentStatus((currentStatus)=> ! currentStatus)} variant='danger'>
+    <Button className='playButton' onClick={() => setCurrentStatus((currentStatus)=> ! currentStatus)} variant='danger'>
         {displayIcon()}
     </Button>
   )

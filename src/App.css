@@ -1,0 +1,117 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+#root {
+    height: 100vh;
+    width: 100vw;
+}
+
+.App {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: .5% 2%;
+}
+
+.sidebar {
+    background-color: lightgreen;
+    height: 100%;
+    width: 15%;
+}
+
+.content {
+    height: 100%;
+    width: 85%;
+}
+
+.header {
+    background-color: lightgray;
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 1%;
+
+}
+
+.header > .header-action {
+    display: flex;
+    align-items: center;
+    gap: 15%;
+    width: 13%;
+}
+
+.header > .timeDone {
+
+}
+
+.body {
+    display: flex;
+    background-color: lightblue;
+    height: 80%;
+    margin-bottom: 1%;
+    padding: 1.5%;
+}
+
+.playButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+}
+
+.day-container {
+    min-width: 440px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    width: 100%;
+    height: 100%;
+    padding: 3% 1.5%;
+    overflow-y: auto;
+}
+
+.time-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: brown;
+    width: 100%;
+    height: 15%;
+    min-height: 65px;
+    min-width: 70px;
+    padding: 2%;
+}
+
+.time-container > .information {
+    display: flex;
+    justify-content: flex-end;
+    gap: 3%;
+    width: 60%;
+}
+
+.time-container > .information > .begin-time,
+.time-container > .information > .end-time,
+.time-container > .information > .duration {
+    height: 100%;
+    background-color: white;
+    width: min-content;
+    padding: 1% 3%;
+    border: thin solid gray;
+}
+
+
+.time-container > .information > .description {
+    min-width: 215px;
+    width: 40%;
+    outline: none;
+}
