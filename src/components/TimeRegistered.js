@@ -1,22 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import getCurrentTime from "../getCurrentTime";
+import transformAsTime from "../transformAsTime";
 
-export default function TimeRegistered({
-  beginTime = "08:00",
-  endTime = "12:00",
-  duration = "04:00"
-}) {
+export default function TimeRegistered({ beginTime, endTime, duration }) {
   return (
     <div className="time-container">
       <input className="description" type="text" />
       <div className="information">
         <span className="begin-time" name="beginTime">
-          {beginTime}
+          {transformAsTime(beginTime)}
         </span>
         <span className="end-time" name="endTime">
-          {endTime}
+          {transformAsTime(endTime)}
         </span>
         <span className="duration" name="duration">
-          {duration}
+          {transformAsTime(duration)}
         </span>
       </div>
     </div>
