@@ -9,6 +9,7 @@ export default function Sidebar() {
         viewBox="0 0 24 24"
         stroke="currentColor"
         stroke-width="2"
+        className="icon"
       >
         <path
           stroke-linecap="round"
