@@ -32,14 +32,18 @@ body {
   color: hsl(var(--hue), var(--saturation), var(--light-color));
   border-right: thin solid
     hsl(var(--hue), var(--saturation), var(--light-color));
-  padding: 3%;
+  padding: 1%;
   height: 100%;
-  width: 15%;
+  width: 7%;
+}
+
+.sidebar .icon {
+    width: 100%;
 }
 
 .content {
   height: 100%;
-  width: 85%;
+  width: 100%;
 }
 
 .header {
@@ -107,7 +111,19 @@ body {
   background-color: hsl(var(--hue), var(--saturation), 90%);
   height: 80%;
   margin-bottom: 1%;
-  padding: 0 1.5%;
+  padding: 0 0 0 1.5%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: hsl(var(--hue), var(--saturation) var(--light-color)); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsl(var(--hue), var(--saturation), var(--dark-color)); 
 }
 
 .day-container {
@@ -121,6 +137,7 @@ body {
   padding-top: 2.5%;
   padding-bottom: 2.5%;
   overflow-y: auto;
+  padding-right: 1.5%;
 }
 
 .day-container .time-container {
@@ -129,7 +146,7 @@ body {
   justify-content: space-between;
   border: thin solid var(--darker-color);
   width: 100%;
-  height: 15%;
+  height: 18%;
   min-height: 65px;
   min-width: 70px;
   padding: 2%;
@@ -151,16 +168,27 @@ body {
   );
 }
 
-.time-container .information {
+.time-container .information-container {
   display: flex;
   justify-content: flex-end;
   gap: 3%;
   width: 60%;
 }
 
-.information .begin-time,
-.information .end-time,
-.information .duration {
+.information-container .time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .1rem 0;
+}
+
+.information-container .time .label {
+    font-weight: 500;
+    text-align: center;
+    font-size: .75rem;
+}
+
+.information-container .time .info{
   height: 100%;
   min-height: 2rem;
   background-color: hsl(var(--hue), var(--saturation), var(--light-color));
@@ -168,13 +196,16 @@ body {
   user-select: none;
   width: min-content;
   min-width: 3.5rem;
-  padding: 1% 3%;
+  padding: .1rem .25rem;
   border: thin solid hsl(var(--hue), var(--saturation), var(--dark-color));
+  font-size: .9rem;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .time-container .description {
-  min-width: 215px;
-  width: 60%;
+  min-width: 35%;
+  width: 40%;
   outline: none;
   font-family: inherit;
   padding-left: 1rem;
